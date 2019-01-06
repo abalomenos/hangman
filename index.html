@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SkyComTech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css"/>
+
+</head>
+<body>
+
+    <nav>
+        <div class="navWrapper">
+            <div class="navLeft">
+                <h1>Aris Balomenos</h1>
+            </div>
+            <div class="navRight">
+                <div class="topnav" id="myTopnav">
+                    <a href="index.html">About</a>
+                    <a href="index.html" class="active">Portfolio</a>
+                    <a href="index.html">Contact</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+            
+        <div class="hangman">
+                
+            <h2>Hangman</h2>
+            <hr>
+            <h4>New York Themed Guessing Game!</h4>
+            <div id="gameStart">
+                <h3 class="centerMessage">Press the Enter key to get started!</h3> <!-- Any Key was requested, but used Enter instead -->
+            </div>
+            <div id="gameWon">
+                    <h3 class="centerMessage">You Won!<br>Press the Enter key to continue.</h3>
+            </div>
+            <div id="gameLost">
+                    <h3 class="centerMessage">You Lost. Better luck next time!<br>Press the Enter key to continue.</h3>
+            </div>
+            <div id="game">
+                <br>
+                <h3>Current Word</h3>
+                <div id="currentWord">
+                    <table class="centerTable">
+                        <tr id="dashes"></tr>
+                    </table>
+                </div>
+                <br>
+                <h3>Hint</h3>
+                <div id="hint"></div>
+
+                <table class="leftTable">
+                    <tr>
+                        <th>Letters Guessed:</th>
+                        <td id="guessed"></td>
+                    </tr>
+                    <tr>
+                        <th>Guesses Remaining:</th>
+                        <td id="guesses"></td>
+                    </tr>
+                </table>
+                <table class="rightTable">
+                    <tr>
+                        <th>Wins:</th>
+                        <td id="wins"></td>
+                    </tr>
+                    <tr>
+                        <th>Losses:</th>
+                        <td id="losses"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        2018 &copy; SkyComTech
+    </footer>
+
+    <script src="./assets/javascript/main.js"></script>
+    <script src="./assets/javascript/game.js"></script>
+
+</body>
+</html>
