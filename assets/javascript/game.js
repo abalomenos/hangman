@@ -22,11 +22,20 @@ var wins = 0;
 var flag1 = 1; // Flag for current key already pressed
 var gameState = "";
 
+var iframe = document.createElement('iframe');
+        iframe.style.display = "none";
+        iframe.src = ""
+        iframe.allow="autoplay"
+        iframe.id="audio"
+        document.body.appendChild(iframe);
+
+
 // Clear everything for new game
 function clear(){
     guessedArray = [];
     showLetter = [];
     document.getElementById("guessed").innerHTML = guessedArray;
+    document.getElementById("audio").src = ""
 }
 
 // Select Random word and initialize game
@@ -176,7 +185,7 @@ document.onkeyup = function() {
     }
     if (gameState == "won") {
         gameState = "";
-        // winSound();
+        winSound();
         wins++;
         document.getElementById("wins").innerHTML = wins;
         document.getElementById("game").style.display = "none";
@@ -204,12 +213,7 @@ document.onkeyup = function() {
         }
     }
     function winSound(){
-        var iframe = document.createElement('iframe');
-        iframe.style.display = "none";
-        iframe.src = "./assets/audio/FS.mp3"
-        iframe.allow="autoplay"
-        iframe.id="audio"
-        document.body.appendChild(iframe);
+        document.getElementById("audio").src = "./assets/audio/FS.mp3"
     }
 }
 
