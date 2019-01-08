@@ -135,7 +135,7 @@ function isLetter(key){
 }
 
 // Grab key pressed, this is where all the magic happens
-document.onkeyup = function() {
+document.onkeyup = function(event) {
     if (gameState == "playing") {
         var key = event.key.toUpperCase();
         if(isLetter(key)) { // Check if it is a letter
@@ -199,7 +199,8 @@ document.onkeyup = function() {
         }
     }
     // Start Game By Pressing Enter
-    if (event.keyCode === 13) {
+    var x = event.charCode || event.keyCode; // depending on browser - for compatibility
+    if (x === 13) {
         if (gameState != "playing") { // If Enter is pressed while playing game, avoid reset
             gameState = "playing";
             document.getElementById("gameStart").style.display = "none";
